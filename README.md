@@ -2,6 +2,16 @@
 
 A library with fully accessible svelte components acting as primitives.
 
+All this components are designed with accessibility in mind. Here are some of the ways in which they are accessible:
+
+- **Semantic HTML elements**: Each component uses semantic HTML elements, which helps screen readers and other assistive technology better understand the content and context of the component.
+- **ARIA attributes**: In addition to using semantic HTML elements, each component also includes ARIA attributes as needed to provide additional information to assistive technology.
+- **Keyboard accessibility**: Each component is fully keyboard accessible, meaning that users can navigate and interact with the component using only the keyboard. This is important for users who may not be able to use a mouse or other pointing device.
+- **Focus management**: Each component manages focus appropriately, so that users can easily see where they are on the page and navigate to other parts of the page as needed.
+- **Customizability**: Each component includes a range of props that can be used to customize the appearance and behavior of the component to suit the needs of individual users and applications.
+
+By incorporating these and other accessibility best practices, we can help ensure that our components are usable and effective for as many users as possible, regardless of their abilities or assistive technology needs.
+
 
 ## Docs
 
