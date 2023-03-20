@@ -173,3 +173,37 @@ An accessible textarea component for Svelte applications.
   on:input={handleTextareaInput}
 />
 ```
+
+### Select Component
+
+An accessible select or dropdown component for Svelte applications.
+
+#### Props
+
+- `id` (string): Unique identifier for the select field.
+- `label` (string): Text label for the select field.
+- `options` (array): Array of objects representing the options for the select field. Each object should have a `label` and `value` property.
+- `value` (string or null, default: null): Currently selected value.
+- `required` (boolean, default: false): Determines if the select field is required.
+- `disabled` (boolean, default: false): Determines if the select field is disabled.
+- `ariaDescribedBy` (string | null, default: null): Optional ARIA description.
+
+#### Events
+
+- `input`: Fired whenever the select value changes.
+
+#### Usage
+
+```html
+<Select
+  id="my-select"
+  label="My Select"
+  value="option1"
+  {options}
+  required
+  aria-describedby="select-instructions"
+  class="custom-class"
+  style="background-color: lightblue;"
+  on:input={handleSelectInput}
+/>
+```

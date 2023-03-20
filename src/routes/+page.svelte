@@ -1,5 +1,5 @@
 <script>
-	import { Button, Input, Checkbox, Image, Textarea } from '$lib';
+	import { Button, Input, Checkbox, Image, Textarea, Select } from '$lib';
 </script>
 
 <h1>Primitives</h1>
@@ -113,3 +113,39 @@
 
 <h3>Example:</h3>
 <Textarea />
+
+<hr />
+
+<h2>Select Component</h2>
+<p>An accessible select or dropdown component for Svelte applications.</p>
+
+<h3>Props</h3>
+<ul>
+	<li><code>id</code> (string): Unique identifier for the select field.</li>
+	<li><code>label</code> (string): Text label for the select field.</li>
+	<li>
+		<code>options</code> (array): Array of objects representing the options for the select field.
+		Each object should have a <code>label</code> and <code>value</code> property.
+	</li>
+	<li><code>value</code> (string or null, default: null): Currently selected value.</li>
+	<li>
+		<code>required</code> (boolean, default: false): Determines if the select field is required.
+	</li>
+	<li>
+		<code>disabled</code> (boolean, default: false): Determines if the select field is disabled.
+	</li>
+	<li><code>ariaDescribedBy</code> (string | null, default: null): Optional ARIA description.</li>
+</ul>
+
+<h3>Events</h3>
+<ul>
+	<li><code>input</code>: Fired whenever the select value changes.</li>
+</ul>
+
+<h3>Example:</h3>
+<Select
+	options={[
+		{ label: 'Option 1', value: '1' },
+		{ label: 'Option 2', value: '2' }
+	]}
+/>
