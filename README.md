@@ -12,8 +12,19 @@ All this components are designed with accessibility in mind. Here are some of th
 
 By incorporating these and other accessibility best practices, we can help ensure that our components are usable and effective for as many users as possible, regardless of their abilities or assistive technology needs.
 
-
 ## Docs
+
+### Installation
+
+`$ npm i svelte-primitives`
+
+### Usage
+
+In your svelte files you can import any of this components:
+
+`import { Button } from 'svelte-primitives'`
+
+## Components
 
 ### Button Component
 
