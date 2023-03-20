@@ -118,3 +118,37 @@ An accessible image component for Svelte applications.
   style="background-color: green;"
 />
 ```
+
+### Textarea Component
+
+An accessible textarea component for Svelte applications.
+
+#### Props
+
+- `id` (string): Unique identifier for the textarea field.
+- `label` (string): Text label for the textarea field.
+- `value` (string, default: ''): Current textarea field value.
+- `placeholder` (string, default: ''): Placeholder text.
+- `required` (boolean, default: false): Determines if the textarea is required.
+- `disabled` (boolean, default: false): Determines if the textarea is disabled.
+- `ariaDescribedBy` (string | null, default: null): Optional ARIA description.
+
+#### Events
+
+- `input`: Fired whenever the textarea value changes.
+
+#### Usage
+
+```html
+<Textarea
+  id="my-textarea"
+  label="My Textarea"
+  value="Hello, World!"
+  placeholder="Type something here..."
+  required
+  aria-describedby="textarea-instructions"
+  class="custom-class"
+  style="background-color: lightblue;"
+  on:input={handleTextareaInput}
+/>
+```

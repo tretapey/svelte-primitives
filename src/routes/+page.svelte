@@ -1,5 +1,5 @@
 <script>
-	import { Button, Input, Checkbox, Image } from '$lib';
+	import { Button, Input, Checkbox, Image, Textarea } from '$lib';
 </script>
 
 <h1>Primitives</h1>
@@ -89,3 +89,27 @@
 
 <h3>Example:</h3>
 <Image src="http://craftsnippets.com/articles_images/placeholder/placeholder.jpg" />
+
+<hr />
+
+<h2>Textarea Component</h2>
+<p>An accessible textarea component for Svelte applications.</p>
+
+<h3>Props</h3>
+<ul>
+	<li><code>id</code> (string): Unique identifier for the textarea field.</li>
+	<li><code>label</code> (string): Text label for the textarea field.</li>
+	<li><code>value</code> (string, default: ''): Current textarea field value.</li>
+	<li><code>placeholder</code> (string, default: ''): Placeholder text.</li>
+	<li><code>required</code> (boolean, default: false): Determines if the textarea is required.</li>
+	<li><code>disabled</code> (boolean, default: false): Determines if the textarea is disabled.</li>
+	<li><code>ariaDescribedBy</code> (string | null, default: null): Optional ARIA description.</li>
+</ul>
+
+<h3>Events</h3>
+<ul>
+	<li><code>input</code>: Fired whenever the textarea value changes.</li>
+</ul>
+
+<h3>Example:</h3>
+<Textarea />
