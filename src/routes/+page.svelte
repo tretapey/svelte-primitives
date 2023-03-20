@@ -1,5 +1,5 @@
 <script>
-	import { Button, Input, Checkbox } from '$lib';
+	import { Button, Input, Checkbox, Image } from '$lib';
 </script>
 
 <h1>Primitives</h1>
@@ -75,3 +75,17 @@
 
 <h3>Example:</h3>
 <Checkbox label="hello" />
+
+<hr />
+
+<h2>Image Component</h2>
+<p>An accessible image component for Svelte applications.</p>
+
+<h3>Props</h3>
+<ul>
+	<li><code>src</code> (string): The URL for the image.</li>
+	<li><code>alt</code> (string, default: ''): The alternative text for the image.</li>
+</ul>
+
+<h3>Example:</h3>
+<Image src="http://craftsnippets.com/articles_images/placeholder/placeholder.jpg" />

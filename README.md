@@ -97,3 +97,22 @@ A fully accessible checkbox component for Svelte applications.
   style="background-color: blue;"
 />
 
+### Image Component
+
+An accessible image component for Svelte applications.
+
+#### Props
+
+- `src` (string): The URL for the image.
+- `alt` (string, default: ''): The alternative text for the image.
+
+#### Usage
+
+```html
+<Image
+  src="https://example.com/image.jpg"
+  alt="Example Image"
+  class="custom-class"
+  style="background-color: green;"
+/>
+
