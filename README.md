@@ -96,6 +96,8 @@ A fully accessible checkbox component for Svelte applications.
   class="custom-class"
   style="background-color: blue;"
 />
+```
+
 
 ### Image Component
 
@@ -115,4 +117,4 @@ An accessible image component for Svelte applications.
   class="custom-class"
   style="background-color: green;"
 />
-
+```
