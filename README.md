@@ -68,3 +68,32 @@ An accessible input component for Svelte applications.
 />
 ```
 
+### Checkbox Component
+
+A fully accessible checkbox component for Svelte applications.
+
+#### Props
+
+- `id` (string): Unique identifier for the checkbox.
+- `label` (string): Text label for the checkbox.
+- `checked` (boolean, default: false): Determines if the checkbox is checked.
+- `required` (boolean, default: false): Determines if the checkbox is required.
+- `disabled` (boolean, default: false): Determines if the checkbox is disabled.
+- `ariaDescribedBy` (string | null, default: null): Optional ARIA description.
+
+#### Events
+
+- `change`: Emitted when the checkbox value changes. Payload: Event.
+
+#### Usage
+
+```html
+<Checkbox
+  id="my-checkbox"
+  label="Check me"
+  checked={false}
+  on:change={() => console.log('Checkbox changed!')}
+  class="custom-class"
+  style="background-color: blue;"
+/>
+

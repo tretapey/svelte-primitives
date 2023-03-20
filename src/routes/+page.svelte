@@ -1,5 +1,5 @@
 <script>
-	import { PButton, PInput } from '$lib';
+	import { Button, Input, Checkbox } from '$lib';
 </script>
 
 <h1>Primitives</h1>
@@ -21,7 +21,7 @@
 </ul>
 
 <h3>Example:</h3>
-<PButton />
+<Button />
 
 <hr />
 
@@ -47,4 +47,31 @@
 </ul>
 
 <h3>Example:</h3>
-<PInput label="hello" />
+<Input />
+
+<hr />
+
+<h2>Checkbox Component</h2>
+<p>A fully accessible checkbox component for Svelte applications.</p>
+
+<h3>Props</h3>
+<ul>
+	<li><code>id</code> (string): Unique identifier for the checkbox.</li>
+	<li><code>label</code> (string): Text label for the checkbox.</li>
+	<li><code>checked</code> (boolean, default: false): Determines if the checkbox is checked.</li>
+	<li>
+		<code>required</code> (boolean, default: false): Determines if the checkbox is required.
+	</li>
+	<li>
+		<code>disabled</code> (boolean, default: false): Determines if the checkbox is disabled.
+	</li>
+	<li><code>ariaDescribedBy</code> (string | null, default: null): Optional ARIA description.</li>
+</ul>
+
+<h3>Events</h3>
+<ul>
+	<li><code>change</code>: Emitted when the checkbox value changes. Payload: Event.</li>
+</ul>
+
+<h3>Example:</h3>
+<Checkbox label="hello" />

@@ -1,6 +1,9 @@
 <!-- Input.svelte -->
 <script lang="ts">
-	export let id = 'input';
+	import { createEventDispatcher } from 'svelte';
+	import { v4 as uuidv4 } from 'uuid';
+
+	export let id = uuidv4();
 	export let label = '';
 	export let type = 'text';
 	export let value = '';
@@ -9,7 +12,6 @@
 	export let disabled = false;
 	export let ariaDescribedBy: string | null = null;
 
-	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher<{ input: Event }>();
 
 	function handleInput(event: Event) {
