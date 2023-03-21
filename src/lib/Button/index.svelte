@@ -1,29 +1,20 @@
-<!-- Button.svelte -->
+<!-- AccessibleButton.svelte -->
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { v4 as uuidv4 } from 'uuid';
 
-	export let label = 'Submit';
-	export let type: 'button' | 'submit' | 'reset' = 'button';
-	export let disabled = false;
-	export let ariaLabel: string | null = null;
+	export let label: string | null = null;
+	export let content: string | HTMLElement = 'Button';
 
-	const dispatch = createEventDispatcher<{ click: MouseEvent }>();
-
-	function handleClick(event: MouseEvent) {
-		if (!disabled) {
-			dispatch('click', event);
-		}
-	}
+	let buttonId = `button-${uuidv4()}`;
 </script>
 
-<button
-	on:click={handleClick}
-	{type}
-	{disabled}
-	aria-label={ariaLabel || label}
-	aria-disabled={disabled ? 'true' : 'false'}
-	style={disabled ? 'cursor: not-allowed;' : 'cursor: pointer;'}
-	{...$$restProps}
->
-	{label}
-</button>
+{#if label}
+	<button id={buttonId} aria-label={label} {...$$restProps}>
+		<slot>{content}</slot>
+	</button>
+{:else}
+	<button id={buttonId} {...$$restProps}>
+		<slot>{content}</slot>
+	</button>
+{/if}
+

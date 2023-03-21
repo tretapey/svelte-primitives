@@ -1,35 +1,31 @@
-<!-- Input.svelte -->
+<!-- AccessibleInput.svelte -->
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import { v4 as uuidv4 } from 'uuid';
 
-	export let id = uuidv4();
-	export let label = '';
 	export let type = 'text';
-	export let value = '';
-	export let placeholder = '';
+	export let label: string | null = null;
+	export let placeholder: string | null = null;
 	export let required = false;
-	export let disabled = false;
-	export let ariaDescribedBy: string | null = null;
+	export let value: string | null = null;
 
-	const dispatch = createEventDispatcher<{ input: Event }>();
-
-	function handleInput(event: Event) {
-		dispatch('input', event);
-	}
+	let inputId = `input-${uuidv4()}`;
+	let describedById = label ? `describedBy-${uuidv4()}` : null;
 </script>
 
 {#if label}
-	<label for={id}>{label}</label>
+	<label for={inputId} class="accessible-input-label">{label}</label>
 {/if}
 <input
-	{id}
 	{type}
-	{value}
+	id={inputId}
 	{placeholder}
 	{required}
-	{disabled}
-	on:input={handleInput}
-	aria-describedby={ariaDescribedBy}
+	{value}
+	aria-required={required}
+	aria-label={label}
+	aria-describedby={describedById}
 	{...$$restProps}
 />
+{#if describedById}
+	<span id={describedById} class="sr-only">{label}</span>
+{/if}
